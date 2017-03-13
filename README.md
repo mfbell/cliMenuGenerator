@@ -1,9 +1,6 @@
-# cli-menu-generator
-Python CLI Menu Generator
-
-# Quotes from cli-menu.py
-A CLI menu generator.
+# Python CLI menu generator.
     
+    From cli-menu.py:
     This function [menu] generates a menu with given lines and then only
     accepts inputs that are in acceptables, when it get ones of these it
     returns it.
