@@ -1,5 +1,5 @@
 # Python CLI menu generator.
-    
+```
     From cli-menu.py:
     This function [menu] generates a menu with given lines and then only
     accepts inputs that are in acceptables, when it get ones of these it
@@ -18,11 +18,14 @@
         - Defaults to true.
     postclear: Clear the screen after a succesful command is given.
         - Defaults to false.
-        
-# sytax      
-menu(acceptables [, lines, unknown, prompt, preclear, postclear])
+```
 
-# example use
+## sytax      
+```menu(acceptables [, lines, unknown, prompt, preclear, postclear])
+```
+
+## example use
+```
 import cli-menu
 
 lines = ["HI", "Welcome to this example", "Type hi to continue"]
@@ -30,9 +33,11 @@ acceptables = ["hi"]
 unknown = "You did not type hi :("
 prompt = "/"
 cmd = cli-menu.menu(acceptables, lines, unknown, prompt)
+```
 
-# other tools
+## other tools
 There is clear()
 This clears the screen with the os' clear screen command or if os module is not available it uses black lines.
 The default amount of lines is 100. To change it, it is clear()'s first and only argument.
-clear([lines])
+```clear([lines])
+```
