@@ -2,7 +2,7 @@
 
 __author__ = "https://github.com/mtech0"
 __license__ = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __status__ = "Dev"
 
 _errors = {}
@@ -17,7 +17,7 @@ from platform import system as os_name
 _os_name = os_name()
 
 # Menu Generator
-def menu(self, acceptables, lines=None, unknown=None, preclear=True, prompt=None, postclear=False):
+def menu(self, acceptables, lines=None, unknown=None, prompt=None, preclear=True, postclear=False):
     """A CLI menu generator.
     
     This function generates a menu with given lines and then only
