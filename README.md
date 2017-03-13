@@ -21,7 +21,8 @@
 ```
 
 ## sytax      
-```menu(acceptables [, lines, unknown, prompt, preclear, postclear])
+```
+menu(acceptables [, lines, unknown, prompt, preclear, postclear])
 ```
 
 ## example use
@@ -39,5 +40,6 @@ cmd = cli-menu.menu(acceptables, lines, unknown, prompt)
 There is clear()
 This clears the screen with the os' clear screen command or if os module is not available it uses black lines.
 The default amount of lines is 100. To change it, it is clear()'s first and only argument.
-```clear([lines])
+```
+clear([lines])
 ```
