@@ -17,7 +17,7 @@ from platform import system as os_name
 _os_name = os_name()
 
 # Menu Generator
-def menu(self, acceptables, lines=None, unknown=None, prompt=None, preclear=True, postclear=False):
+def menu(acceptables, lines=None, unknown=None, prompt=None, preclear=True, postclear=False):
     """A CLI menu generator.
     
     This function generates a menu with given lines and then only
@@ -63,7 +63,7 @@ def menu(self, acceptables, lines=None, unknown=None, prompt=None, preclear=True
     return cmd
     
 # Tools
-def clear(self, lines=100):
+def clear(lines=100):
     """Clears the screen.
      
     Lines is used if system is not available.
