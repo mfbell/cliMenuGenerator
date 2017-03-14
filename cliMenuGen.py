@@ -1,4 +1,4 @@
-"""CLI Module for Planner"""
+"""A CLI Menu Generator"""
 
 __author__ = "mtech0 https://github.com/mtech0"
 __license__ = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
@@ -14,9 +14,6 @@ try:
 except:
     _errors["os-module"] = False
 from platform import system as os_name
-
-
-_os_name = os_name()
 
 # Menu Generator
 def menu(acceptables, lines=None, unknown=None, prompt=None, preclear=True, postclear=False):
@@ -59,7 +56,7 @@ def menu(acceptables, lines=None, unknown=None, prompt=None, preclear=True, post
         if cmd in acceptables or "*" in acceptables:
             break
         else:
-            print(unknown)
+            print(unknown.format(cmd))
     if postclear:
         clear()
     return cmd
@@ -72,13 +69,13 @@ def clear(lines=100):
     lines: The amound of lines to clear by.
         - Defaults to 100
     """
-    
+    os_name = os_name()
     if not _errors["os-module"]:
         print("\n"*lines)
         print("Could not import os module - Using fall-back method") 
-    elif _os_name == "Windows":
+    elif os_name == "Windows":
         system("cls")
-    elif _os_name == "Linux":
+    elif os_name == "Linux":
         system("clear")
     return None
     
@@ -90,6 +87,7 @@ def ranAsMain():
              "SKU: {0} [Status: {1}]".format(__sku__, __status__)]
     for line in lines:
         print(line)
+    return None
         
 if __name__ == "__main__":
     ranAsMain()
