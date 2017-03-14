@@ -9,7 +9,7 @@ __url__ = "https://github.com/mtech0/cli-menu-generator/"
 
 _errors = {}
 try:
-    import os
+    from os import system
     _errors["os-module"] = True
 except:
     _errors["os-module"] = False
