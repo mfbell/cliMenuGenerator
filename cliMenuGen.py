@@ -1,9 +1,11 @@
 """CLI Module for Planner"""
 
-__author__ = "https://github.com/mtech0"
+__author__ = "mtech0 https://github.com/mtech0"
 __license__ = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 __status__ = "Dev"
+__sku__ = "Main"
+__url__ = "https://github.com/mtech0/cli-menu-generator/"
 
 _errors = {}
 try:
@@ -71,7 +73,7 @@ def clear(lines=100):
         - Defaults to 100
     """
     
-    if not _errors["os-module"]
+    if not _errors["os-module"]:
         print("\n"*lines)
         print("Could not import os module - Using fall-back method") 
     elif _os_name == "Windows":
@@ -79,3 +81,15 @@ def clear(lines=100):
     elif _os_name == "Linux":
         system("clear")
     return None
+    
+def ranAsMain():
+    lines = ["CLI Menu Generator v{0}".format(__version__),
+             "See {0} for more info.".format(__url__),
+             "Writen by {0}".format(__author__),
+             "Licensed under {0}".format(__license__),
+             "SKU: {0} [Status: {1}]".format(__sku__, __status__)]
+    for line in lines:
+        print(line)
+        
+if __name__ == "__main__":
+    ranAsMain()
