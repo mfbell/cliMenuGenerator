@@ -9,7 +9,7 @@ __url__ = "https://github.com/mtech0/cli-menu-generator/"
 
 _errors = {}
 try:
-    import os
+    from os import system
     _errors["os-module"] = True
 except:
     _errors["os-module"] = False
@@ -69,13 +69,14 @@ def clear(lines=100):
     lines: The amound of lines to clear by.
         - Defaults to 100
     """
-    os_name = os_name()
+    
+    os = os_name()
     if not _errors["os-module"]:
         print("\n"*lines)
         print("Could not import os module - Using fall-back method") 
-    elif os_name == "Windows":
+    elif os == "Windows":
         system("cls")
-    elif os_name == "Linux":
+    elif os == "Linux":
         system("clear")
     return None
     
