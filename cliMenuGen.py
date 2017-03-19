@@ -1,11 +1,15 @@
-"""A CLI Menu Generator"""
+"""A CLI Menu Generator.
 
-__author__ = "mtech0 https://github.com/mtech0"
-__license__ = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
-__version__ = "1.1.0"
-__status__ = "Dev"
-__sku__ = "Main"
-__url__ = "https://github.com/mtech0/cli-menu-generator/"
+Generator command line menus and only except given inputs.
+And more. See README.md
+"""
+
+AUTHOR = "mtech0 https://github.com/mtech0"
+LICENSE = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
+VERSION = "1.1.3"
+STATUS = "Dev"
+SKU = "Main"
+URL = "https://github.com/mtech0/cli-menu-generator/"
 
 _errors = {}
 try:
@@ -70,6 +74,7 @@ def clear(lines=100):
         - Defaults to 100
     """
     
+    global _errors
     os = os_name()
     if not _errors["os-module"]:
         print("\n"*lines)
@@ -81,11 +86,11 @@ def clear(lines=100):
     return None
     
 def ranAsMain():
-    lines = ["CLI Menu Generator v{0}".format(__version__),
-             "See {0} for more info.".format(__url__),
-             "Writen by {0}".format(__author__),
-             "Licensed under {0}".format(__license__),
-             "SKU: {0} [Status: {1}]".format(__sku__, __status__)]
+    lines = ["CLI Menu Generator v{0}".format(VERSION),
+             "See {0} for more info.".format(URL),
+             "Writen by {0}".format(AUTHOR),
+             "Licensed under {0}".format(LICENCE),
+             "SKU: {0} [Status: {1}]".format(SKU, STATUS)]
     for line in lines:
         print(line)
     return None
