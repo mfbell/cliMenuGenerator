@@ -6,7 +6,7 @@ And more. See README.md
 
 AUTHOR = "mtech0 https://github.com/mtech0"
 LICENSE = "GNU-GPLv3 https://www.gnu.org/licenses/gpl.txt"
-VERSION = "1.1.3"
+VERSION = "1.1.5"
 STATUS = "Dev"
 SKU = "Main"
 URL = "https://github.com/mtech0/cli-menu-generator/"
@@ -84,16 +84,13 @@ def clear(lines=100):
     elif os == "Linux":
         system("clear")
     return None
-    
-def ranAsMain():
-    lines = ["CLI Menu Generator v{0}".format(VERSION),
-             "See {0} for more info.".format(URL),
-             "Writen by {0}".format(AUTHOR),
-             "Licensed under {0}".format(LICENCE),
-             "SKU: {0} [Status: {1}]".format(SKU, STATUS)]
-    for line in lines:
-        print(line)
-    return None
         
 if __name__ == "__main__":
-    ranAsMain()
+    info = ["configFileHandler, import to use.",
+            "Version {0}, {1}".format(VERSION, STATUS),
+            "Written by {0}".format(AUTHOR),
+            "Licensed under {0}".format(LICENSE),
+            "SKU: {0}".format(SKU),
+            "URL: {0}".format(URL)]
+    for line in info:
+        print(line)
